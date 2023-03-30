@@ -1,7 +1,14 @@
+import React from "react";
 
 const Summary = (props) => {
     return (
+      <div className="summary-container" >
         <p className="summary">{props.summary}</p>
-    )
-}
-export default Summary
+      </div>
+    );
+  };
+  
+  export default Summary;
+
+
+
