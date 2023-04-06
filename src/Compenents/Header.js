@@ -2,7 +2,6 @@ import starImage from '../assets/stargrey.png';
 
 const header = () => {
     return (
-        
         <header className="header-wrapper">
             <div className="starImage"><img src={starImage} alt="Grey star icon"/></div>
              <h1 className="header">Expresso, the Ultimate AI Summarization Tool.</h1>

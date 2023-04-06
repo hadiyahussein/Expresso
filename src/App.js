@@ -15,6 +15,7 @@ function App() {
   
   // Storing the API key in a constant
   const apiKey = process.env.REACT_APP_API_KEY;
+  console.log(apiKey)
   
   // Setting up state variables
   const [summary, setSummary] = useState('');
@@ -75,19 +76,33 @@ function App() {
   return (
     <main className='app'>
       <div className="wrapper">
+
         <Navbar/>
         <Routes>
           <Route path="/" element={ 
             <div>
               <Header/>
-              <Form handleSubmit={handleSubmit} handleChange={handleChange} typedValue={userInput} formError={apiError}/>
-              <Summary summary={summary} summaryContainer={summaryContainer} />
+              
+              <Form 
+                handleSubmit={handleSubmit} 
+                handleChange={handleChange} 
+                typedValue={userInput} 
+                formError={apiError}
+              />
+
+              <Summary 
+                summary={summary} 
+                summaryContainer={summaryContainer} 
+              />
               {errorMessage && <p>{errorMessage}</p>}
             </div>
-          } />
+          }/>
+
           <Route path="/about" element={<About />} /> 
         </Routes>
+
       </div>
+
       <Footer/>
     </main>
   );

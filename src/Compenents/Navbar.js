@@ -1,10 +1,7 @@
-
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
-
-const Navbar = () =>
-{
+const Navbar = () => {
     return (
         <>
             <div className="nav-bar">
